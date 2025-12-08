@@ -1,0 +1,2 @@
+### Why should this be a web solution?
+This should be a web solution because no one wants to download a desktop application just to contribute to a project. Additionally, a web solution allows for easy collaboration and access from anywhere with an internet connection. Furthermore, a web solution can be easily scaled and maintained, making it a more cost-effective and efficient option for large-scale projects. Finally, a web solution provides a consistent user experience across different devices and platforms, ensuring a better user experience for all contributors.
