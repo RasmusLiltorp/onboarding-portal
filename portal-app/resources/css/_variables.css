@@ -1,0 +1,64 @@
+/* ====================================
+    Global CSS Custom Properties (Variables)
+    ====================================
+
+    This file defines CSS custom properties (also called CSS variables) that
+  are used throughout the entire application. By centralizing these values here, we can:
+
+    1. Maintain consistency - the same colors/sizes are used everywhere
+    2. Make changes easily - update once here, changes apply everywhere
+    3. Enable theming - could swap variables for dark mode, etc.
+
+    These variables are defined on :root (the <html> element) so they are
+    available to all elements in the document.
+
+    Usage in other CSS files: var(--variable-name)
+    Example: background: var(--header-bg);
+ */
+
+:root {
+    /* ================================
+       Layout Variables
+       ================================ */
+
+    /* Standard height for the header bar across all pages */
+    --header-height: 64px;
+
+
+    /* ================================
+       Color Palette - Backgrounds
+       ================================ */
+
+    /* Primary background color - clean white for main surfaces */
+    --header-bg: #ffffff;
+
+    /* Subtle border color - light gray that separates sections without
+being harsh */
+    --header-border: #e5e7eb;
+
+    /* Hover state background - slight gray tint to indicate interactivity
+*/
+    --hover-bg: #f3f4f6;
+
+
+    /* ================================
+       Color Palette - Text
+       ================================ */
+
+    /* Primary text color - near-black for maximum readability */
+    /* Using #111827 instead of pure #000000 is softer on the eyes */
+    --text-primary: #111827;
+
+    /* Secondary text color - muted gray for less important text */
+    /* Used for descriptions, hints, timestamps, etc. */
+    --text-secondary: #6b7280;
+
+
+    /* ================================
+       Color Palette - Brand
+       ================================ */
+
+    /* Brand/accent color - blue used for links, buttons, and emphasis */
+    /* This color represents the application's identity */
+    --brand-color: #2563eb;
+}

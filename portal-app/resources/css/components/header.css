@@ -1,0 +1,137 @@
+/* ====================================
+   Header Container
+   ==================================== */
+/* Main header element - contains all header content */
+.header {
+    /* Uses white background defined in variables */
+    background: var(--header-bg);
+
+    /* Adds thin border at bottom to separate from page content */
+    border-bottom: 1px solid var(--header-border);
+
+    /* Fixed height so header stays consistent across pages */
+    height: var(--header-height);
+
+    /* Makes header stick to top when scrolling */
+    position: sticky;
+    top: 0;
+
+    /* Ensures header stays above other content (higher = more on top) */
+    z-index: 50;
+}
+
+/* Container inside header that centers and limits width of content */
+.header__container {
+    /* Limits maximum width so content doesn't stretch too wide on large screens */
+    max-width: 1280px;
+
+    /* Takes full height of parent (.header) to vertically center content */
+    height: 100%;
+
+    /* Centers the container horizontally on the page */
+    /* "0 auto" means: 0 margin top/bottom, automatic (equal) left/right margins */
+    margin: 0 auto;
+
+    /* Adds space on left and right sides so content doesn't touch edges */
+    /* 1.5rem = 24px (1rem = 16px by default) */
+    padding: 0 1.5rem;
+
+    /* Enables flexbox layout for easy alignment */
+    display: flex;
+
+    /* Vertically centers child elements (logo and navigation) */
+    align-items: center;
+
+    /* Pushes logo to left and navigation to right with space between */
+    justify-content: space-between;
+}
+
+/* ====================================
+   Brand/Logo
+   ==================================== */
+/* Logo/brand link styling */
+.header__brand {
+    /* Slightly larger than normal text for emphasis */
+    /* 1.25rem = 20px */
+    font-size: 1.25rem;
+
+    /* Makes text bold (600 out of 900 is semi-bold) */
+    font-weight: 600;
+
+    /* Uses brand color defined in variables */
+    color: var(--brand-color);
+
+    /* Removes default underline from link */
+    text-decoration: none;
+}
+
+/* ====================================
+   Navigation
+   ==================================== */
+/* Container for all navigation links */
+.header__nav {
+    /* Arranges links horizontally in a row */
+    display: flex;
+
+    /* Adds small space between each link */
+    /* 0.5rem = 8px */
+    gap: 0.5rem;
+}
+
+/* Individual navigation link styling */
+.header__link {
+    /* Uses primary text color for normal state */
+    color: var(--text-primary);
+
+    /* Removes default link underline */
+    text-decoration: none;
+
+    /* Adds space inside link for larger clickable area */
+    /* 0.5rem top/bottom, 1rem left/right */
+    padding: 0.5rem 1rem;
+
+    /* Rounds corners slightly for modern look */
+    /* 0.375rem = 6px */
+    border-radius: 0.375rem;
+
+    /* Smooth transition when background changes (on hover) */
+    /* Changes happen over 0.15 seconds */
+    transition: background-color 0.15s;
+}
+
+/* Link appearance when mouse hovers over it */
+.header__link:hover {
+    /* Changes background to light gray on hover */
+    background: var(--hover-bg);
+}
+
+/* Link appearance when it's the current/active page */
+.header__link--active {
+    /* Changes text to brand color to show it's active */
+    color: var(--brand-color);
+
+    /* Light blue background to highlight active state */
+    background: #eff6ff;
+}
+
+/* ====================================
+   Responsive Design
+   ==================================== */
+/* Changes that apply only on screens 768px wide or smaller (tablets/phones) */
+@media (max-width: 768px) {
+    /* Reduces space between navigation links on small screens */
+    .header__nav {
+        /* Smaller gap to fit more links */
+        gap: 0.25rem;
+    }
+
+    /* Makes links smaller on mobile to fit better */
+    .header__link {
+        /* Reduces padding to save space */
+        padding: 0.5rem 0.75rem;
+
+        /* Slightly smaller text size */
+        /* 0.875rem = 14px */
+        font-size: 0.875rem;
+    }
+}

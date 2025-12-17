@@ -1,4 +1,9 @@
 @import 'tailwindcss';
+/* Site header - logo and navigation */
+@import 'components/header.css';
+/* Global CSS custom properties used throughout the app */
+@import '_variables.css';
+
 
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
 @source '../../storage/framework/views/*.php';
