@@ -1,0 +1,90 @@
+/* ====================================
+   Form Styles
+   ====================================
+
+   Shared styles for all forms in the application.
+*/
+
+.form {
+    /* Limit form width for readability */
+    max-width: 600px;
+    margin-top: 1.5rem;
+}
+
+/* ====================================
+   Form Groups
+   ==================================== */
+
+.form__group {
+    /* Space between form fields */
+    margin-bottom: 1.5rem;
+}
+
+.form__label {
+    /* Block display so label is above input */
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: var(--text-primary);
+}
+
+/* ====================================
+   Inputs and Textareas
+   ==================================== */
+
+.form__input,
+.form__textarea {
+    /* Full width inputs */
+    width: 100%;
+    padding: 0.75rem;
+
+    /* Border styling */
+    border: 1px solid var(--header-border);
+    border-radius: 0.375rem;
+
+    /* Text styling */
+    font-size: 1rem;
+    color: var(--text-primary);
+
+    /* Smooth focus transition */
+    transition: border-color 0.15s;
+}
+
+.form__input:focus,
+.form__textarea:focus {
+    /* Highlight on focus */
+    outline: none;
+    border-color: var(--brand-color);
+}
+
+.form__input::placeholder,
+.form__textarea::placeholder {
+    color: var(--text-secondary);
+}
+
+.form__textarea {
+    /* Allow vertical resize only */
+    resize: vertical;
+    min-height: 150px;
+}
+
+/* ====================================
+   Validation Error States
+   ==================================== */
+
+/* Red border on invalid inputs */
+.form__input--error {
+    border-color: #dc2626;
+}
+
+.form__input--error:focus {
+    border-color: #dc2626;
+}
+
+/* Error message text below input */
+.form__error {
+    display: block;
+    margin-top: 0.25rem;
+    font-size: 0.875rem;
+    color: #dc2626;
+}

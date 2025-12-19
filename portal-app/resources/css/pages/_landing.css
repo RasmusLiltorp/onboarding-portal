@@ -1,0 +1,98 @@
+/* ====================================
+   Landing Page Styles
+   ====================================
+
+   Styles for the home/landing page hero section.
+*/
+
+/* ====================================
+   Hero Section
+   ==================================== */
+
+.hero {
+    /* Center content vertically and horizontally */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    /* Add vertical spacing */
+    padding: 4rem 0;
+}
+
+.hero__title {
+    /* Large, bold headline */
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--text-primary);
+
+    /* Space below title */
+    margin-bottom: 1rem;
+}
+
+.hero__tagline {
+    /* Muted subtitle text */
+    font-size: 1.25rem;
+    color: var(--text-secondary);
+
+    /* Limit width for readability */
+    max-width: 500px;
+
+    /* Space below tagline */
+    margin-bottom: 2rem;
+}
+
+/* ====================================
+   Call-to-Action Buttons
+   ==================================== */
+
+.hero__actions {
+    /* Arrange buttons side by side */
+    display: flex;
+    gap: 1rem;
+}
+
+/* Base button styles */
+.btn {
+    /* Padding inside button */
+    padding: 0.75rem 1.5rem;
+
+    /* Rounded corners */
+    border-radius: 0.5rem;
+
+    /* Medium weight text */
+    font-weight: 500;
+    font-size: 1rem;
+
+    /* Remove default link underline */
+    text-decoration: none;
+
+    /* Smooth hover transition */
+    transition:
+        background-color 0.15s,
+        transform 0.15s;
+}
+
+/* Primary button - filled with brand color */
+.btn--primary {
+    background-color: var(--brand-color);
+    color: white;
+}
+
+.btn--primary:hover {
+    /* Slightly darker on hover */
+    background-color: #1d4ed8;
+    transform: translateY(-1px);
+}
+
+/* Secondary button - outlined style */
+.btn--secondary {
+    background-color: transparent;
+    color: var(--brand-color);
+    border: 1px solid var(--brand-color);
+}
+
+.btn--secondary:hover {
+    /* Light fill on hover */
+    background-color: #eff6ff;
+}

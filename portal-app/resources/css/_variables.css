@@ -24,7 +24,6 @@
     /* Standard height for the header bar across all pages */
     --header-height: 64px;
 
-
     /* ================================
        Color Palette - Backgrounds
        ================================ */
@@ -40,7 +39,6 @@ being harsh */
 */
     --hover-bg: #f3f4f6;
 
-
     /* ================================
        Color Palette - Text
        ================================ */
@@ -52,7 +50,6 @@ being harsh */
     /* Secondary text color - muted gray for less important text */
     /* Used for descriptions, hints, timestamps, etc. */
     --text-secondary: #6b7280;
-
 
     /* ================================
        Color Palette - Brand

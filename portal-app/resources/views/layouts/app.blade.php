@@ -18,6 +18,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    {{-- CSRF token for JavaScript requests (used by delete confirmation) --}}
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
     <!-- Page title - can be overridden by child views using
   @section('title') -->
     <title>@yield('title', config('app.name', 'Repository
@@ -32,10 +35,12 @@
 
 <!-- Main content area - each page injects content here -->
 <main>
-    @yield('content')
+    <div class="container">
+        @yield('content')
+    </div>
 </main>
 
 <!-- Site footer -->
-{{-- <x-footer /> --}}
+<x-footer />
 </body>
 </html>

@@ -1,0 +1,111 @@
+/* ====================================
+   Repository Pages Styles
+   ====================================
+
+   Styles for the repository index, show, and edit pages.
+*/
+
+/* ====================================
+   Repository List
+   ==================================== */
+
+.repo-list {
+    /* Remove default list styling */
+    list-style: none;
+    padding: 0;
+    margin: 2rem 0;
+}
+
+.repo-list__item {
+    /* Card-like appearance */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border: 1px solid var(--header-border);
+    border-radius: 0.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.repo-list__info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.repo-list__name {
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.repo-list__description {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+}
+
+.repo-list__actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.repo-list__actions a,
+.repo-list__actions button {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.875rem;
+    border-radius: 0.375rem;
+    text-decoration: none;
+    color: var(--text-secondary);
+    background: none;
+    border: 1px solid var(--header-border);
+    cursor: pointer;
+}
+
+.repo-list__actions a:hover,
+.repo-list__actions button:hover {
+    background: var(--hover-bg);
+}
+
+/* ====================================
+   Repository Show Page
+   ==================================== */
+
+/* Header with title and edit button side by side */
+.repo-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+/* Container for all repository details */
+.repo-details {
+    margin-bottom: 2rem;
+}
+
+/* Individual detail item (label + value pair) */
+.repo-details__item {
+    margin-bottom: 1.5rem;
+}
+
+/* Small muted label above each value */
+.repo-details__label {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    margin-bottom: 0.25rem;
+}
+
+/* The actual value text */
+.repo-details__value {
+    color: var(--text-primary);
+}
+
+/* Special styling for the guide content - boxed with background */
+.repo-details__guide {
+    padding: 1rem;
+    background: var(--hover-bg);
+    border-radius: 0.5rem;
+    /* Preserve line breaks and whitespace in the guide text */
+    white-space: pre-wrap;
+}

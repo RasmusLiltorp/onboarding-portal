@@ -1,9 +1,16 @@
-@import 'tailwindcss';
-/* Site header - logo and navigation */
-@import 'components/header.css';
+@import "tailwindcss";
 /* Global CSS custom properties used throughout the app */
-@import '_variables.css';
+@import "./_variables.css";
 
+/* Base layout styles - body flex container, main content area */
+@import "./_base.css";
+@import "./pages/_landing.css";
+@import "./pages/_repositories.css";
+@import "./pages/_forms.css";
+
+/* Site header - logo and navigation */
+@import "./components/header.css";
+@import "./components/footer.css";
 
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
 @source '../../storage/framework/views/*.php';
@@ -11,6 +18,8 @@
 @source '../**/*.js';
 
 @theme {
-    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-        'Segoe UI Symbol', 'Noto Color Emoji';
+    --font-sans:
+        "Instrument Sans", ui-sans-serif, system-ui, sans-serif,
+        "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+        "Noto Color Emoji";
 }

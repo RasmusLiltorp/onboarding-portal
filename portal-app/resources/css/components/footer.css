@@ -1,0 +1,41 @@
+/* ====================================
+   Footer Component Styles
+   ====================================
+
+   Site-wide footer styling.
+   Matches header styling for visual consistency.
+*/
+
+body {
+    /* Full viewport height minimum */
+    min-height: 100vh;
+
+    /* Flexbox column layout */
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    /* Takes up all available space, pushing footer down */
+    flex: 1;
+}
+
+.footer {
+    /* Subtle top border to separate from content */
+    border-top: 1px solid var(--header-border);
+
+    /* Background matches header for consistency */
+    background-color: var(--header-bg);
+}
+
+.footer__container {
+    /* Constrain width and center content */
+    max-width: 1200px;
+    margin: 0 auto;
+    /* Same horizontal padding as header (1.5rem = 24px) */
+    padding: 24px 1.5rem;
+
+    /* Muted text for footer - less prominent than main content */
+    color: var(--text-secondary);
+    font-size: 14px;
+}

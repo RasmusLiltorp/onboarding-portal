@@ -1,0 +1,46 @@
+/* ====================================
+   Base Layout Styles
+   ====================================
+
+   Global layout styles that apply to the entire page.
+   Sets up the flex container for sticky footer behavior
+   and defines the main content container.
+*/
+
+/* ====================================
+   Body Layout
+   ==================================== */
+
+body {
+    /* Full viewport height minimum */
+    min-height: 100vh;
+
+    /* Flexbox column layout for sticky footer */
+    display: flex;
+    flex-direction: column;
+}
+
+/* ====================================
+   Main Content Area
+   ==================================== */
+
+main {
+    /* Takes up all available space, pushing footer to bottom */
+    flex: 1;
+}
+
+/* ====================================
+   Container
+   ==================================== */
+
+/* Reusable container that matches header/footer width */
+.container {
+    /* Same max-width as header for alignment */
+    max-width: 1200px;
+
+    /* Centers container horizontally */
+    margin: 0 auto;
+
+    /* Same horizontal padding as header, with vertical spacing */
+    padding: 2rem 1.5rem;
+}
