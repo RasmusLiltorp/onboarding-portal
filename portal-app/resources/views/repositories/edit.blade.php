@@ -1,22 +1,22 @@
 {{--
     Repository Edit Page
 
-    Form to edit an existing repository.
-    Similar to create page but with prefilled values.
+    Form to edit an existing repository. Prefilled with current values.
+    Submits via PUT to /{id} which triggers the update() method in RepositoryController.
 --}}
 @extends('layouts.app')
 
-@section('title', 'Edit ' . $repository['name'] . ' - Onboardo')
+@section('title', 'Edit ' . $repository->name . ' - Onboardo')
 
 @section('content')
-    <h1>Edit {{ $repository['name'] }}</h1>
+    <h1>Edit {{ $repository->name }}</h1>
 
     {{--
         Repository edit form
         Method: PUT - used for updating existing resources
         Note: HTML forms only support GET/POST, so we use @method('PUT') to spoof it
     --}}
-    <form action="{{ route('repositories.update', $repository['id']) }}" method="POST" class="form">
+    <form action="{{ route('repositories.update', $repository) }}" method="POST" class="form">
         @csrf
         {{--
             Method spoofing - HTML forms don't support PUT/PATCH/DELETE
@@ -32,7 +32,7 @@
                 id="name"
                 name="name"
                 class="form__input"
-                value="{{ $repository['name'] }}"
+                value="{{ $repository->name }}"
                 required
             >
         </div>
@@ -45,7 +45,7 @@
                 id="url"
                 name="url"
                 class="form__input"
-                value="{{ $repository['url'] ?? '' }}"
+                value="{{ $repository->url ?? '' }}"
                 required
             >
         </div>
@@ -58,7 +58,7 @@
                 id="description"
                 name="description"
                 class="form__input"
-                value="{{ $repository['description'] ?? '' }}"
+                value="{{ $repository->description ?? '' }}"
             >
         </div>
 
@@ -71,13 +71,13 @@
                 class="form__textarea"
                 rows="10"
                 required
-            >{{ $repository['guide'] ?? '' }}</textarea>
+            >{{ $repository->guide ?? '' }}</textarea>
         </div>
 
-        {{-- Submit button --}}
-        <button type="submit" class="btn btn--primary">Update Repository</button>
+        {{-- Submit button - using input type="submit" for Dusk test compatibility --}}
+        <input type="submit" class="btn btn--primary" value="Update Repository">
     </form>
 
     {{-- Back link --}}
-    <a href="{{ route('repositories.show', $repository['id']) }}" class="btn btn--secondary" style="margin-top: 1rem; display: inline-block;">Cancel</a>
+    <a href="{{ route('repositories.show', $repository) }}" class="btn btn--secondary" style="margin-top: 1rem; display: inline-block;">Cancel</a>
 @endsection

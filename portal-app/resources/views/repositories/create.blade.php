@@ -1,7 +1,6 @@
 {{--
-    Repository Create Page
-
-    Form to create a new repository with onboarding guide.
+    Repository Create Page.
+    This page provides a form to create a new repository entry in the system.
 --}}
 @extends('layouts.app')
 
@@ -75,7 +74,7 @@
             ></textarea>
         </div>
 
-        {{-- Submit button --}}
-        <button type="submit" class="btn btn--primary">Create Repository</button>
+        {{-- Submit button - using input type="submit" for Dusk test compatibility --}}
+        <input type="submit" class="btn btn--primary" value="Create Repository">
     </form>
 @endsection
