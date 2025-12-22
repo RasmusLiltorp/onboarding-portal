@@ -1,5 +1,7 @@
 # Onboarding Portal - Web Development Course
 
+**This is a school project and is NOT production ready.** Do not deploy this application without significant security changes. If you do use this code, make sure to regenerate the `APP_KEY` in `.env`.
+
 This repository contains my solutions for the web development course assignments.
 
 ## Structure
