@@ -17,6 +17,18 @@
 
         <nav class="header__nav">
             <a href="{{ route('repositories.create') }}">New Repository</a>
+            @guest
+                <a href="{{ route('registration.create') }}">Sign Up</a>
+                <a href="{{ route('login') }}">Log In</a>
+            @endguest
+            @auth
+                <a href="{{ route('registered.index') }}">My Favorites</a>
+                <span>{{ Auth::user()->name }}</span>
+                <form method="POST" action="{{ route('login.destroy') }}" dusk="logout">
+                    @csrf
+                    <button type="submit">Log Out</button>
+                </form>
+            @endauth
         </nav>
     </div>
 </header>

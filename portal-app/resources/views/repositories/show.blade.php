@@ -47,6 +47,14 @@
         </div>
     </div>
 
+    {{-- Add to favorites button (auth only) --}}
+    @auth
+        <form method="POST" action="{{ route('registered.store', $repository) }}" dusk="resource-registration">
+            @csrf
+            <button type="submit" class="btn btn--primary">Add to Favorites</button>
+        </form>
+    @endauth
+
     {{-- Back link --}}
     <a href="{{ route('home') }}" class="btn btn--secondary">Back to list</a>
 @endsection

@@ -35,5 +35,13 @@ class RepositorySeeder extends Seeder
             "guide" =>
                 "Run npm install followed by npm run dev to start the development server.",
         ]);
+
+        Repository::create([
+            "name" => "mobile-app",
+            "url" => "https://github.com/example/mobile-app",
+            "description" => "React Native mobile app",
+            "guide" =>
+                "Install dependencies with npm install, then run npx expo start.",
+        ]);
     }
 }

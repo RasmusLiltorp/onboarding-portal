@@ -44,4 +44,9 @@ class Repository extends Model
         "description", // Short description of the repository
         "guide", // Onboarding guide content (markdown/text)
     ];
+
+    public function users()
+    {
+        return $this->belongsToMany(User::class);
+    }
 }
